@@ -1,3 +1,50 @@
 #!/usr/bin/bash
 
 echo "Squadron 156's CyberPatriot Linux Script"
+
+nano /etc/ssh/sshd_config
+
+nano /etc/lightdm/lightdm.conf
+
+nano /etc/group
+
+nano /etc/login.defs
+
+sudo apt-get install libpam-cracklib
+
+nano /etc/pam.d/common-password
+
+nano /etc/pam.d/common-auth 
+
+sudo ufw enable 
+
+sysctl -n net.ipv4.tcp_syncookies
+
+echo 0 | sudo tee -a /etc/host/conf 
+
+echo "nospoof on" | sudo tee -a /etc/host.conf
+
+echo 0 | sudo tee /proc/sys/net/ipv4/ip_forward
+
+nano etc/apt/sources.list
+
+nano /etc/hosts
+
+crontab -e 
+
+sudo apt-get install bum 
+sudo bum 
+
+#DELETE THIS IF IN READ ME 
+sudo service smbd stop
+sudo service samba stop 
+
+chmod -R 444 /var/log
+chmod 440 /etc/passwd
+chmod 440 /etc/shadow 
+chmod 440 /etc/group
+chmod -R 444 /etc/ssh
+
+sudo ss -ln 
+
+echo "Account management, Anti-Malware, upddates, etc (and, obviously, ports) should be done manually"
